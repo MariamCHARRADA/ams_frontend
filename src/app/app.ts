@@ -12,4 +12,7 @@ export class App {
   name: string = 'Mariam Charrada';
   email: string = 'mariam@gmail.com';
 
+  names: string[] =['mariam', 'heDi', 'yaZId', 'SAMi'];
+  
+
 }

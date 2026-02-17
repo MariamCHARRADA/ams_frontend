@@ -5,3 +5,7 @@
 Nom: {{name | uppercase}} 
 <br/>
 Email: {{email}}
+<br/>
+<ul>
+  <li *ngFor="let name of names">{{name|firstLetterUppercase|addIng}}</li>
+</ul>
