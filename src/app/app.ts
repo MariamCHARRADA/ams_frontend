@@ -8,4 +8,8 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   protected readonly title = signal('ams');
+  formation: string = 'Angular';
+  name: string = 'Mariam Charrada';
+  email: string = 'mariam@gmail.com';
+
 }
