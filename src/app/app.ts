@@ -14,5 +14,8 @@ export class App {
 
   names: string[] =['mariam', 'heDi', 'yaZId', 'SAMi'];
   
+  showAlert() {
+    alert('Danger button clicked!');
+  };
 
 }
