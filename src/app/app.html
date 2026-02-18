@@ -1,17 +1,19 @@
 <h1 align="center"> Welcome to AMS</h1>
 
+<app-home></app-home>
+<hr style="border-top: 2px solid black; width: 50%; margin: 0 auto;" />
+
 <!-- PROPERTY BINDING on image -->
-<img [src]="logoUrl"
-     [width]="logoWidth"
-     alt="Application Logo">
+<img [src]="logoUrl" [width]="logoWidth" alt="Application Logo">
+
 
 {{formation}}
-<br/>
+<br />
 <span class="c2"> {{name | uppercase}} </span>
-<br/>
+<br />
 Email: {{email}}
-<br/>
+<br />
 <ul>
-  <li class= "c1" *ngFor="let name of names">{{name|firstLetterUppercase|addIng}}</li>
+  <li class="c1" *ngFor="let name of names">{{name|firstLetterUppercase|addIng}}</li>
 </ul>
-<button type="button" class="btn btn-danger" (click)= "showAlert()">Danger</button>
+<button type="button" class="btn btn-danger" (click)="showAlert()">Danger</button>
