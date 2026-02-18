@@ -14,6 +14,9 @@ export class App {
 
   names: string[] =['mariam', 'heDi', 'yaZId', 'SAMi'];
   
+  logoUrl: string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLgGTCvrhfoPoHExHkZ2ZOBHoVSOTYHSiHur7Ctz4mgw&s';   /* property binding target */
+  logoWidth: number = 150;               /* another property binding example */
+  
   showAlert() {
     alert('Danger button clicked!');
   };

@@ -1,4 +1,9 @@
-<h1 align="center"> welcome to ams</h1>
+<h1 align="center"> Welcome to AMS</h1>
+
+<!-- PROPERTY BINDING on image -->
+<img [src]="logoUrl"
+     [width]="logoWidth"
+     alt="Application Logo">
 
 {{formation}}
 <br/>
@@ -9,4 +14,4 @@ Email: {{email}}
 <ul>
   <li class= "c1" *ngFor="let name of names">{{name|firstLetterUppercase|addIng}}</li>
 </ul>
-<button type="button" class="btn btn-danger" (click)= showAlert()>Danger</button>
+<button type="button" class="btn btn-danger" (click)= "showAlert()">Danger</button>
