@@ -37,4 +37,50 @@
         </div>
     </div>
 
+    <div class="container mt-5">
+
+        <div class="card shadow">
+            <div class="card-header bg-dark text-white text-center">
+                <h4 class="mb-0">Users List</h4>
+            </div>
+            <ng-container *ngIf="listUsers | async as users"> <!-- use async pipe to wait until data is ready -->
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table *ngIf="users.length > 0; else noUsers"
+                            class="table table-striped table-hover table-bordered align-middle text-center">
+
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>City</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let user of users">
+                                    <td>{{ user.id }}</td>
+                                    <td>{{ user.name }}</td>
+                                    <td>{{ user.email }}</td>
+                                    <td>{{ user.phone }}</td>
+                                    <td>{{ user.address.city }}</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </ng-container>
+
+        </div>
+    </div>
 </div>
+
+<!-- msg to show when there are no users found -->
+<ng-template #noUsers>
+    <p class="alert alert-warning text-center" role="alert">
+        No users found.
+    </p>
+</ng-template>

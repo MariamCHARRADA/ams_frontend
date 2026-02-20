@@ -1,5 +1,6 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
@@ -20,6 +21,8 @@ import { FirstLetterUppercasePipe } from './pipes/first-letter-uppercase-pipe';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
+    provideHttpClient(withInterceptorsFromDi())
+
   ],
   bootstrap: [App]
 })
