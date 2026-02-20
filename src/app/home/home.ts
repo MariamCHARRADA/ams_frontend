@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Provider } from '../models';
+/* import { Provider } from '../models'; */
 import { Users } from '../services/users';
 import { BehaviorSubject } from 'rxjs';
 
@@ -11,22 +11,25 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class Home implements OnInit{
 
-  providers: Provider[] = [
+  
+  constructor(private userService: Users) { /* injecting dependencies */
+    }
+
+  /* providers: Provider[] = [
     { id: 1, name: 'Provider 1', email: 'provider1@gmail.com', address: 'Address 1' },
     { id: 2, name: 'Provider 2', email: 'provider2@gmail.com', address: 'Address 2' },
     { id: 3, name: 'Provider 3', email: 'procider2@gmail.com', address: 'Address 3' },
-  ];
+  ]; */
 
   /* listUsers: any; */
   listUsers = new BehaviorSubject<any | null>(null);
   
-  constructor(private userService: Users) { /* injecting dependency: user service */
-
-   }
+   
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(
+
+      this.userService.getUsers().subscribe(
       {
-        next: (data: any) => { /* next = si ok, error = si erreur */
+        next: (data: any) => { /* next = si ok, error = si error */
           this.listUsers.next(data);
           console.log(data);
         },

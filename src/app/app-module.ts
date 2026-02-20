@@ -7,13 +7,17 @@ import { App } from './app';
 import { Home } from './home/home';
 import { AddIngPipe } from './pipes/add-ing-pipe';
 import { FirstLetterUppercasePipe } from './pipes/first-letter-uppercase-pipe';
+import { ListOfProviders } from './list-providers/list-providers';
+import { Navbar } from './navbar/navbar';
 
 @NgModule({
   declarations: [
     App,
     Home,
     AddIngPipe,
-    FirstLetterUppercasePipe
+    FirstLetterUppercasePipe,
+    ListOfProviders,
+    Navbar
   ],
   imports: [
     BrowserModule,
