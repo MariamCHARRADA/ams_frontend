@@ -9,6 +9,8 @@ import { AddIngPipe } from './pipes/add-ing-pipe';
 import { FirstLetterUppercasePipe } from './pipes/first-letter-uppercase-pipe';
 import { ListOfProviders } from './list-providers/list-providers';
 import { Navbar } from './navbar/navbar';
+import { AddProvider } from './add-provider/add-provider';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { Navbar } from './navbar/navbar';
     AddIngPipe,
     FirstLetterUppercasePipe,
     ListOfProviders,
-    Navbar
+    Navbar,
+    AddProvider
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
