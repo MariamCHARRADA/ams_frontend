@@ -11,6 +11,7 @@ import { ListOfProviders } from './list-providers/list-providers';
 import { Navbar } from './navbar/navbar';
 import { AddProvider } from './add-provider/add-provider';
 import { FormsModule } from '@angular/forms';
+import { UpdateProvider } from './update-provider/update-provider';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     FirstLetterUppercasePipe,
     ListOfProviders,
     Navbar,
-    AddProvider
+    AddProvider,
+    UpdateProvider
   ],
   imports: [
     BrowserModule,

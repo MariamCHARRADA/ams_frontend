@@ -48,4 +48,8 @@ export class ListOfProviders implements OnInit {
     );
   }
 
+  updateProvider(id: any) {
+    this.router.navigate(['/updateProvider', id]); //navigate to the update page with the provider's id as a parameter
+  }
+
 }

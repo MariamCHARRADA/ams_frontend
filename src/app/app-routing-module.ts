@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Home } from './home/home';
 import { ListOfProviders } from './list-providers/list-providers';
 import { AddProvider } from './add-provider/add-provider';  
+import { UpdateProvider } from './update-provider/update-provider';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
     {
     path: 'addProvider',
     component: AddProvider
+  },
+  {
+    path: 'updateProvider/:id', //id = parameter qui change
+    component: UpdateProvider
   }
 ];
 
